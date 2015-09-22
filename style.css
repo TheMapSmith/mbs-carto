@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-size: 17px;
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+@media all and (min-width: 30em) {
+	body {
+		font-size: 1.5rem;
+	}
+}
+
+img, object, video {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+.tumblr_video_container {
+	width: auto !important;
+	max-width: 100% !important;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 0 16px 16px;
+	margin: 0 1rem 1rem;
+}
+
+blockquote cite {
+	display: block;
+}
+
+blockquote cite:before {
+	content: "â€“";
+}
+
+/* Page Structure */
+
+/* Container */
+.container {
+	max-width: 720px;
+	max-width: 45rem;
+	margin: 0 auto;
+	padding: 0 16px;
+	padding: 0 1rem;
+}
+
+@font-face {
+  font-family:'Brandon';
+    src:url('brandon_blk.eot');
+    src:url('brandon_blk.eot#iefix') format('embedded-opentype'),
+        url('brandon_blk.woff') format('woff');
+  }
+
+[role=banner] {
+	overflow: hidden;
+  font-family:'Brandon', sans-serif;
+  text-transform: uppercase;
+}
+
+footer[role=contentinfo] {
+	padding: 2rem 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.left {
+	float: left;
+	font-size: 15px;
+	font-size: 0.95rem;
+}
+
+footer[role=contentinfo] .left {
+	float: none;
+}
+
+@media all and (min-width: 500px) {
+	footer[role=contentinfo] .left {
+		float: left;
+	}
+}
+
+.right {
+	float: right;
+	font-size: 15px;
+	font-size: 0.95rem;
+}
+
+footer[role=contentinfo] .right {
+	float: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer[role=contentinfo] .right li {
+	display: inline-block;
+	padding: 0;
+}
+
+@media all and (min-width: 500px) {
+	footer[role=contentinfo] .right {
+		float: right;
+		margin: 15px 0 0 10px;
+	}
+}
+
+/* Posts */
+.posts {
+	position: relative;
+}
+
+.post {
+	padding: 3rem 0 3rem;
+	position: relative;
+}
+
+.ad {
+	margin: 1em 0;
+}
+
+.ad img {
+	display: block;
+	margin: 0 auto;
+}
+
+@media all and (min-width: 1200px) {
+
+	.ad {
+		position: absolute;
+		width: 300px;
+		height: 250px;
+		left: -325px;
+	}
+	.ad img {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.ad-2 {
+		right: -325px;
+		left: auto;
+	}
+
+}
+
+.ad-grid-container {
+	display: none;
+	max-width: 62em;
+	margin: 0 auto;
+}
+
+.post-meta {
+	overflow: hidden;
+}
+
+.qr{
+	display: none;
+}
