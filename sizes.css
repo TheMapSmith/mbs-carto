@@ -6,12 +6,24 @@ body {
   max-width: 760px;
   margin: 0 auto;
 }
+
 h1 {
   font-size: 85px;
   line-height: 90px;
   margin-top: 60px;
   margin-bottom: 30px;
 }
+
+@media all and (max-width: 300px) { /* TODO: figure out media queries */
+  h1 {
+    font-size: 55px;
+    line-height: 65px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+
 h2 {
   font-size: 52px;
   line-height: 60px;
