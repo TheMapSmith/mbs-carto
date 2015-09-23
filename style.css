@@ -11,6 +11,11 @@ body {
 	text-align: left;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
+  color: #222;
+  background-color: #dedede;
+}
+a {
+  color: red;
 }
 
 @media all and (min-width: 30em) {
@@ -66,7 +71,7 @@ blockquote cite:before {
         url('brandon_blk.woff') format('woff');
   }
 
-[role=banner] {
+#mapbox {
 	overflow: hidden;
   font-family:'Brandon', sans-serif;
   text-transform: uppercase;
