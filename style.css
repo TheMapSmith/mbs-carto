@@ -176,3 +176,9 @@ footer[role=contentinfo] .right li {
 .qr{
 	display: none;
 }
+
+.shadow {
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+  box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
+}
