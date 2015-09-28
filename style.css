@@ -179,3 +179,36 @@ strong, em {
 a {
   color: #63b6e5;
 }
+
+/*blockquote courtesy Mapbox css*/
+
+blockquote {
+    color: rgba(0, 0, 0, .5);
+    padding: 0 0 0 30px;
+    background: transparent;
+    position: relative;
+    
+}
+
+blockquote::before {
+    content: '\201C';
+    padding-top: 15px;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .1);
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    height: 35px;
+}
+
+blockquote::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    left: 0;
+    bottom: 0;
+    top: 35px;
+    background-color: rgba(0, 0, 0, .1);
+}

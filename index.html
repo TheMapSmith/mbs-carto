@@ -25,12 +25,18 @@
 		</p>
 
 		<h3>What is <span id="mapbox">Mapbox Studio?</span></h3>
-		<p>
-			<em>
-				<span id="mapbox">Mapbox Studio</span> is a web-based application which allows you to quickly style a map of the
-				<strong>entire</strong> world.
-			</em>
-		</p>
+
+		<div class="">
+			<blockquote>
+				<p><em>
+					<span id="mapbox">Mapbox Studio</span> is a web-based application
+					which allows you to quickly style a map of the
+					<strong>entire</strong> world.
+				</em></p>
+			</blockquote>
+		</div>
+
+
 
 		<h3>Let's unpack that</h3>
 		<p>
@@ -307,7 +313,56 @@
 		</p>
 		<img src="img/line.png" alt="" class="shadow"/>
 		<p>
-
+			This is a pretty standard set of line styling options. There are a couple
+			of options worth noting though. The <code>gap width</code> option is
+			nice for allowing you to have "casing" for your roads or
+			paths for example.
 		</p>
+		<img src="img/line-case-bright.png" alt="" class="shadow" />
+		<p>
+			<em>This is great for road casing. It gives a slight visual separation
+			to the roads. <small> (via Mapbox Streets style)</small></em>
+		</p>
+		<p>
+			The <code>blur</code> setting is an interesting one that we'll check out next
+		</p>
+		<strong>Styling</strong>
+		<p>
+			So let's give our country lines the following settings:
+			<code>
+				color: #EF0 <br>
+				dasharray: [1,2]
+			</code>
+		</p>
+		<img src="img/admin2-1.png" alt="" class="shadow"/>
+		<p>
+			That's nice, but it stays at <code> width: 1px</code> no matter how much
+			you zoom in. Let's make the line width <strong>vary with zoom level.</strong>
+		</p>
+		<strong>Enter Ramps</strong>
+		<p>
+			Gone are the days of <code>CartoCSS</code> where you'd have to set explicit
+			style breaks at integer zoom levels. <small><em>("back in my day...")</em></small>.
+			Now a <strong>function</strong> defines the way your style changes as you zoom.
+			This allows you to very quickly setup complex rules for your styles.
+		</p>
+		<img src="img/admin2-ramp.png" alt="" class="shadow"/>
+		<p>
+			So our yellow dashed country boundaries are nice looking, but let's 
+			<strong>kick'em up a notch!</strong>.
+			Duplicate <!-- TODO: add inline image -->
+			settings:
+			<code>
+
+
+			</code>
+		</p>
+
+<h4>For more reading</h4>
+<p>
+	<a href="https://www.mapbox.com/blog/tags/mapbox-studio/" target="_blank">
+	Check out the <span id="mapbox">Mapbox</span> blog.
+	</a>
+</p>
 
 </body>
