@@ -45,7 +45,7 @@
 			in the halls of the world intelligence agencies.
 		</p>
 		<p>
-			Think about how crazy it was in 1999 when Mapquest launched. It was a
+			Think about how crazy it was in 1996 when Mapquest launched. It was a
 			<em>revelation</em> that you could use the internet to find directions between
 			(most) any two places on the planet. But this was still the sole domain of the
 			super-powerful internet companies.
@@ -259,10 +259,53 @@
 			polygon styling toolbelt...
 		</p>
 		<p>
-			Oh, except did I mention...? Everything you do <strong>changes live??</strong>
+			Oh, except did I mention...? Everything you do <strong>changes live?</strong>
+		</p>
+		<p>
+			Let's take another look at that color picker in action.
+		</p>
+		<img src="img/colorpicker.gif" alt="" class="shadow"/>
+		<p>
+			This is due to the amazing technology <span id="mapbox">Mapbox</span> uses
+			to render the map in your browser. Basically, it uses your graphics card to
+			render the map <em>constantly</em> at 60 frames per second. This allows for
+			the cartographer to get instant feedback on their design, and for the user
+			to never have to wait for the next zoom level to load. This is a gross
+			oversimplification, so if you want to learn more about the underlying
+			technology head over to the
+			<a href="https://www.mapbox.com/blog/mapbox-gl/" target="_blank"><span id="mapbox">Mapbox</span> blog.</a>
 		</p>
 
-		<h4>Queries</h4>
+		<h3>Building the Style</h3>
+		<h4>Land</h4>
+		<p>
+			Let's keep building the map. We've got the water, let's add the land.
+		</p>
+		<p>
+			One important thing to note when creating your map is that your underlying
+			background data (water and land), only the <strong>water</strong>
+			is actual data. To save space, you style the land by styling the
+			<em>background</em> of the map (i.e. the absence of water).
+		</p>
+		<img src="img/background.png" alt="" class="shadow" />
+
+		<h4>Countries</h4>
+		<p>
+			Let's add the country boundaries. This will give us a chance to highlight
+			the built-in query tools.
+		</p>
+		<img src="img/admin.png" alt="" class="shadow" />
+		<p>
+			When you select the <code>admin</code> layer, you get the entire unfiltered
+			dataset. I want to style only the land country boundaries, so I click the
+			<code>add filter</code> button to see what attributes can be queried out.
+		</p>
+		<img src="img/admin-filter.gif" alt="" class="shadow"/>
+		<p>
+			For this layer I only want to see level 2 (country), undisputed land boundaries.
+			Let's look at the ways we can style lines.
+		</p>
+		<img src="img/line.png" alt="" class="shadow"/>
 		<p>
 
 		</p>
