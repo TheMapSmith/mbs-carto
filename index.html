@@ -328,11 +328,13 @@
 		</p>
 		<strong>Styling</strong>
 		<p>
-			So let's give our country lines the following settings:
-			<code>
-				color: #EF0 <br>
-				dasharray: [1,2]
-			</code>
+			So let's give our country lines the following settings: <br>
+			<div class="table shadow">
+				<code>
+					color: #EF0 <br>
+					dasharray: [1,2]
+				</code>
+			</div>
 		</p>
 		<img src="img/admin2-1.png" alt="" class="shadow"/>
 		<p>
@@ -348,15 +350,144 @@
 		</p>
 		<img src="img/admin2-ramp.png" alt="" class="shadow"/>
 		<p>
-			So our yellow dashed country boundaries are nice looking, but let's 
+			So our yellow dashed country boundaries are nice looking, but let's
 			<strong>kick'em up a notch!</strong>.
-			Duplicate <!-- TODO: add inline image -->
-			settings:
-			<code>
-
-
-			</code>
 		</p>
+		<strong>Layering layers</strong>
+		<p>
+			My biggest complaint with migrating away from <code>CartoCSS</code> to
+			<a href="https://www.mapbox.com/mapbox-gl-style-spec/" target="_blank"><code>Mapbox GL</code></a>
+			is the fact that the same data layer can't hold multiple styles.
+			Functionally what this means is that if you want any sort of complicated
+			symbology you need to duplicate that layer in your table of contents.
+		</p>
+		<p>
+			For this map, that means we're ultimately going to end up with
+			<strong>over 100 layers.</strong> <em>(You've been warned)</em>
+		</p>
+		<p>
+			So, let's get started.
+		</p>
+		<strong>The Goal</strong>
+			<h1>NEON</h1>
+		<p>
+			Start by duplicating the existing <code>admin</code> layer with the
+			button at the top of the table of contents.
+		</p>
+			<img src="img/duplicate.png" alt="" class="small shadow"/>
+			<p>
+			We're going to create a neon light-like glowing effect, so below the
+			bright yellow <code>#EF0</code> color we'll put a darker color. We'll
+			also make it wider and utilize the <code>blur</code> function.
+			</p>
+			<div class="table shadow">
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#AB0</code></td>
+					</tr>
+					<tr>
+						<td><code>width:</code></td>
+						<td><code>
+							[0,0.5 <br>
+							22, 30]</code></td>
+					</tr>
+					<tr>
+						<td><code>blur:</code></td>
+						<td><code>
+							[0,0 <br>
+							22,17]</code></td>
+					</tr>
+				</table>
+			</div>
+			<p>
+				That will create a pretty nice effect, but we're not done yet. Let's do it one more
+				time with an even darker yellow and an even wider stroke and larger blur.
+			</p>
+			<div class="table shadow">
+
+
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#660</code></td>
+					</tr>
+					<tr>
+						<td><code>width:</code></td>
+						<td><code>
+							[0,5 <br>
+							10, 30]</code></td>
+					</tr>
+					<tr>
+						<td><code>blur:</code></td>
+						<td><code>
+							[0,10 <br>
+							10,20]</code></td>
+					</tr>
+				</table>
+			</div>
+			<p>
+				Notice that the ramps aren't a slow steady march from <code>z0</code>
+				to <code>z22</code>. In this case I ramp them up quickly so that by time
+				the user gets to <code>z10</code> the admin lines are at their widest.
+				This also means that as they get closer and closer the "visual importance"
+				of the country boundaries fade. This is sensible for the country borders
+				because as the map gets more and more detailed, the border becomes
+				less important visually and the roads start demanding the higher
+				visual importance.
+			</p>
+			<p>
+				The result will be something like this:
+			</p>
+			<img src="img/admin-ex@3x.png" alt="" class="shadow"/>
+			<p>
+				Now you're probably starting to piece together why there will  be over
+				100 levels. If we want a glowing effect on all the lines then we're going
+				to have to <em>duplicate each line</em> several times.
+			</p>
+			<p>
+				So here's our world map with yellow dashed neon country borders.
+			</p>
+			<img src="img/admin2-done.png" alt="" class="shadow"/>
+			<p>
+				And here it is a little closer:
+			</p>
+			<img src="img/admin2-closeup.png" alt="" class="shadow"/>
+			<p>
+				Next I'm going to add admin level 4 (states) in a similar style, but purple
+				and a little thinner than the country borders.
+			</p>
+			<img src="img/admin4.png" alt="" class="shadow"/>
+			<strong>Water</strong>
+			<p>
+				Those Swiss lakes look a little dull, let's make them glow!
+			</p>
+			<p>
+				Now we'll do something just a little tricky. We're going to take the
+				<code>water</code> layer - which is a polygon dataset - and add
+				it to our table of contents as a <strong>line</strong> layer.
+			</p>
+			<p>
+				In the <code>New Layer</code> view, select the <code>water</code>
+				dataset, and then at the bottom change the type from
+				<strong>polygon</strong> to <strong><em>line</em></strong>.
+			</p>
+			<img src="img/water-line.png" alt="" class="shadow"/>
+			<p>
+				This new layer will automatically appear at the top of your table of
+				contents, but we don't necessarily want it there. To rearrange, simply
+				click and drag on the layer!
+			</p>
+			<img src="img/rearrange.gif" alt="" class="shadow centered"/>
+			<p>
+				Nice.
+			</p>
+			<img src="img/water-glow.png" alt="" class="shadow"/>
+
+
+
+<!-- 8.198, 46.819 7.1 -->
+
 
 <h4>For more reading</h4>
 <p>

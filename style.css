@@ -187,7 +187,7 @@ blockquote {
     padding: 0 0 0 30px;
     background: transparent;
     position: relative;
-    
+
 }
 
 blockquote::before {
@@ -211,4 +211,16 @@ blockquote::after {
     bottom: 0;
     top: 35px;
     background-color: rgba(0, 0, 0, .1);
+}
+
+img.small {
+  max-height: 100px;
+}
+
+.table { /*for styling Mapbox GL json*/
+  background: #eaeaea;
+}
+
+.centered {
+  text-align: center;
 }
