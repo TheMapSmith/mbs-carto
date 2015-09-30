@@ -224,3 +224,13 @@ img.small {
 .centered {
   text-align: center;
 }
+
+@font-face {
+  font-family:'Magda Clean Mono Offc Pro';
+    src:url('MagdaCleanMonoOffcPro-Black.ttf') format('truetype');
+  }
+
+#magda {
+  font-family: 'Magda Clean Mono Offc Pro', serif;
+  font-weight:
+}

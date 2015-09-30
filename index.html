@@ -478,11 +478,68 @@
 				contents, but we don't necessarily want it there. To rearrange, simply
 				click and drag on the layer!
 			</p>
-			<img src="img/rearrange.gif" alt="" class="shadow centered"/>
+			<div class="centered">
+				<img src="img/rearrange.gif" alt="" class="shadow"/>
+			</div>
 			<p>
 				Nice.
 			</p>
 			<img src="img/water-glow.png" alt="" class="shadow"/>
+
+			<strong>Basic Labels</strong>
+			<p>
+				Let's give our map readers some context as their zooming in on our map
+				by adding country labels.
+			</p>
+			<p>
+				Start by creating a new layer using the <code>country_label</code>
+				layer.
+			</p>
+			<img src="img/admin-pts-new.png" alt="" class="shadow"/>
+			<p>
+				Be sure to add a filter for <code>type = country</code> and change the
+				type of layer at the bottom to <code>Symbol</code>
+			</p>
+			<p>
+				<span id="mapbox">Mapbox</span> has generously teamed up with
+				<a href="https://www.fontfont.com/" target="_blank">FontFont</a> to provide
+				a very nice assortment of professional fonts for your map design pleasure.
+				Let's pick one that's angular and technical looking so that it matches
+				our neon theme. I opted to go with
+				<span id="magda">Magda Clean Mono Offc Pro Black.</span>
+			</p>
+			<p>
+				Let's style those labels.
+			</p>
+			<img src="img/country-labels.png" alt="" class="shadow"/>
+			<p>
+				Another thing we want to do is have state labels show up at some point
+				as you zoom in. For this we'll use the <code>zoom-extent</code> setting
+				in the new layer window.
+			</p>
+			<img src="img/zoom-extent.png" alt="" class="shadow"/>
+
+			<strong>Highways</strong>
+
+			<p>
+				Alright, this post is getting <em>really</em> long, so we'll skip ahead
+				to the really neat part - <strong>neon roads.</strong>
+			</p>
+			<p>
+				Start by creating a new layer using the <code>road</code> dataset with
+				a filter of <code>class = 'motorway'</code>.
+			</p>
+			<img src="img/motorway-data.png" alt="" class="shadow"/>
+			<p>
+				To create a glowing neon effect, we're actually going to stack
+				<em>three different layers</em> of the same data using different styles.
+				Remember how we stacked up several layers to making the glowing country
+				borders earlier? We'll do the same thing here for the highways.
+			</p>
+			<p>
+				The result with look something like this.
+			</p>
+			<img src="img/hwy-glow-ex@3x.png" alt="" class="shadow"/>
 
 
 
