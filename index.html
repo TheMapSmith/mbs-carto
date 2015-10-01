@@ -18,7 +18,11 @@
 	<main role="main">
 
 		<p class="intro">
-			This is simultaneously a guide to designing a radical map using the new
+			I've been playing around with the new
+			<a href="http://www.mapbox.com/studio" id="mapbox">Mapbox Studio</a>
+			for a couple of weeks and I wanted to share my impressions. I've also been
+			trying to push the cartographic envelope
+			 designing a radical map using the new
 			<a href="http://www.mapbox.com/studio" id="mapbox">Mapbox Studio</a> and an in-depth
 			review of the latest cartographic tool from the open-source,
 			<a href="http://www.osm.org" target="_blank">OpenStreetMap</a> powerhouse.
@@ -207,9 +211,11 @@
 		<img src="img/add_data.png" alt="" class="shadow"/>
 		<p>
 			You get a preview of the depth and breadth of information available at your fingertips.
-			You just need to click on the data in the map that you want to style and hit "Select.""
+			You just need to click on the data in the map that you want to style and hit "Select."
 		</p>
-		<img src="img/select.png" alt="" class="shadow"/>
+		<div class="centered">
+			<img src="img/select.png" alt="" class="shadow"/>
+		</div>
 		<p>
 			Once a layer has been selected, the data is highlighted in the map. This will
 			be especially helpful later when filters are required.
@@ -270,7 +276,9 @@
 		<p>
 			Let's take another look at that color picker in action.
 		</p>
-		<img src="img/colorpicker.gif" alt="" class="shadow"/>
+		<div class="centered">
+			<img src="img/colorpicker.gif" alt="" class="shadow"/>
+		</div>
 		<p>
 			This is due to the amazing technology <span id="mapbox">Mapbox</span> uses
 			to render the map in your browser. Basically, it uses your graphics card to
@@ -539,11 +547,32 @@
 			<p>
 				The result with look something like this.
 			</p>
-			<img src="img/hwy-glow-ex@3x.png" alt="" class="shadow"/>
-
-
-
-<!-- 8.198, 46.819 7.1 -->
+			<img src="img/hwy-glow-ex@3x.png" alt="" class="shadow" />
+			<p>
+				Let's get started. First let's make the thin top layer. It is a thin,
+				yellowish, slightly blurry line.
+			</p>
+			<img src="img/highway-lite.png" alt="" class="shadow" />
+			<p>
+				Next, duplicate the layer, make it a little orange-er, a little wider,
+				and a little blurrier.
+			</p>
+			<img src="img/highway-med.png" alt="" class="shadow"/>
+			<p>
+				Next, duplicate the layer again, make it a little orange-er, a little wider,
+				and a little blurrier.
+			</p>
+			<img src="img/highway-drk.png" alt="" class="shadow"/>
+			<p>
+				Let's see how that looks as we zoom in. I've added lower level streets
+				just for reference, this won't be the final design. Also, there are gaps
+				between different segments because the <code>road</code> dataset doesn't
+				include bridges. To get those to show up you need to duplicate the layer
+				and change the dataset to the <code>bridge</code> dataset.
+			</p>
+			<div class="centered">
+				<img src="img/highway-zoom.gif" alt="" class="shadow"/>
+			</div>
 
 
 <h4>For more reading</h4>
