@@ -23,11 +23,6 @@ iframe {
 	width: 100% !important;
 }
 
-.tumblr_video_container {
-	width: auto !important;
-	max-width: 100% !important;
-}
-
 blockquote {
 	font-style: italic;
 	margin: 0 16px 16px;
@@ -113,58 +108,6 @@ footer[role=contentinfo] .right li {
 	}
 }
 
-/* Posts */
-.posts {
-	position: relative;
-}
-
-.post {
-	padding: 3rem 0 3rem;
-	position: relative;
-}
-
-.ad {
-	margin: 1em 0;
-}
-
-.ad img {
-	display: block;
-	margin: 0 auto;
-}
-
-@media all and (min-width: 1200px) {
-
-	.ad {
-		position: absolute;
-		width: 300px;
-		height: 250px;
-		left: -325px;
-	}
-	.ad img {
-		max-width: 100%;
-		width: 100%;
-	}
-
-	.ad-2 {
-		right: -325px;
-		left: auto;
-	}
-
-}
-
-.ad-grid-container {
-	display: none;
-	max-width: 62em;
-	margin: 0 auto;
-}
-
-.post-meta {
-	overflow: hidden;
-}
-
-.qr{
-	display: none;
-}
 
 .shadow {
   -webkit-box-shadow: 4px 4px 5px 0px rgba(50,50,50,0.25);
@@ -232,4 +175,50 @@ img.small {
 
 #magda {
   font-family: 'Magda Clean Mono Offc Pro', serif;
+}
+
+
+@media only screen and (min-width : 480px) {
+  .navbar {
+    top: 0;
+    left: 1%;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/*@media only screen and (min-width : 768px) {
+  .navbar {
+    top: 0;
+    left: 1%;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+  }
+}*/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .navbar {
+    top: 0;
+    left: 1%;
+    position: fixed;
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+  }
+}
+
+.navbar-brand {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
+    text-decoration: none;
+}
+
+.navbar > a {
+  color: #142736;
+}
+
+a.navbar-brand::hover {
+  color: blue;
 }
