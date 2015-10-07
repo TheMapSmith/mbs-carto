@@ -62,9 +62,18 @@ blockquote cite:before {
 }
 
 footer[role=contentinfo] {
+  color: #f8f8f8;
 	padding: 2rem 0;
 	overflow: hidden;
 	text-align: center;
+  background-attachment: scroll;
+  background-image: url(img/usaresources-banner-bw.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .left {
@@ -221,4 +230,19 @@ img.small {
 
 a.navbar-brand::hover {
   color: blue;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.list-inline > li > a {
+  color: #f8f8f8;
 }
