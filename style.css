@@ -61,6 +61,18 @@ blockquote cite:before {
   text-transform: uppercase;
 }
 
+header {
+  top: 0;
+  background-attachment: scroll;
+  background-image: url(img/manhattan-bg.png);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 footer[role=contentinfo] {
   color: #f8f8f8;
 	padding: 2rem 0;
@@ -190,7 +202,8 @@ img.small {
 /*@media only screen and (min-width : 480px) {*/
   .navbar {
     top: 0;
-    left: 1%;
+    left: 0;
+    padding-left: 15px;
     background-color: #f8f8f8;
     position: fixed;
     width: 100%;
@@ -220,7 +233,7 @@ img.small {
 
 .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px;
+    text-shadow: rgba(0, 0, 0, 0.83) 0px 2px 2px, 0px 0px 15px white, 0px 0px 5px white,0px 0px 2px white,0px 0px 25px white;
     text-decoration: none;
 }
 
@@ -245,4 +258,33 @@ a.navbar-brand::hover {
 
 .list-inline > li > a {
   color: #f8f8f8;
+}
+
+.byline {
+  border-bottom: 1.5px solid #142736;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #f8f8f8;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-shadow: 1px 1px 1px black,2px 2px 5px black;
 }

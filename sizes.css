@@ -11,7 +11,6 @@
       body {
         font-size: 18px;
         line-height: 29px;
-        max-width: 760px;
         margin: 0 auto;
       }
       h1 {
@@ -70,8 +69,10 @@
       body {
         font-size: 20px;
         line-height: 32px;
-        max-width: 760px;
         margin: 0 auto;
+      }
+      .container {
+        max-width: 760px;
       }
       h1 {
         font-size: 85px;
@@ -129,8 +130,10 @@
       body {
         font-size: 22px;
         line-height: 35px;
-        max-width: 760px;
         margin: 0 auto;
+      }
+      .container {
+        max-width: 760px;
       }
       h1 {
         font-size: 93px;
