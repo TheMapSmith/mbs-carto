@@ -131,6 +131,9 @@
 				Develop a map inspired by neon signs.
 		</h4>
 		<img src="img/mellow-mushroom.jpg" alt="" class="shadow"/>
+		<div class="caption">
+			Image courtsey of Courtney Designs
+		</div>
 			<!-- TODO: Find a way to <hide> this segment -->
 			<!-- To understand <strong>how</strong> amazing the above
 			statement is, we'll have to go waaaay back.
@@ -238,6 +241,9 @@
 			a blank source.
 		</p>
 		<img src="img/new_style.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The "New Style" screen. Choose an preset design to modify or start from scratch.
+		</div>
 
 		<h3>The blank source</h3>
 		<p>
@@ -245,6 +251,9 @@
 			to really make something unique, I think it's a must.
 		</p>
 		<img src="img/blank.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			A blank style. Table of contents on left, map area on right (currently blank).
+		</div>
 		<p>
 			This doesn't look too dissimilar to a traditional GIS program. You launch it,
 			and it sits there - empty - waiting for your data.
@@ -261,18 +270,30 @@
 			to "X-Ray" mode, allowing you to see all the data behind the scenes.
 		</p>
 		<img src="img/add_data.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			"X-Ray" mode - see all the raw data hiding behind the map. It's interactive so you
+			can click to pick your new layer.
+		</div>
 		<p>
 			You get a preview of the depth and breadth of information available at your fingertips.
 			You just need to click on the data in the map that you want to style and hit "Select."
 		</p>
 		<div class="centered">
 			<img src="img/select.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Click on an area of water to choose that data source for a new layer.
+			</div>
 		</div>
 		<p>
 			Once a layer has been selected, the data is highlighted in the map. This will
 			be especially helpful later when filters are required.
 		</p>
 		<img src="img/selected.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Once you select the <code>water</code> layer it becomes highlighted on the map
+				and the rest of the data gets greyed out.
+			</map>
+		</div>
 		<p>
 			Go ahead and press "Create Layer" and the map switches back to Style mode.
 		</p>
@@ -283,37 +304,61 @@
 			a slight sigh of relief that our map is no longer blank.
 		</p>
 		<img src="img/style1.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			You can have whatever default color you want, as long as it's black.
+		</div>
 		<p>
 			Let's see what we have to work with.
 		</p>
 		<img src="img/polygon_tools.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Polygon styling tools.
+		</div>
 		<p>
 			Let's break down our toolbox.
 			<ul>
 				<li>Color picker</li>
 				<ul>
 					<li><img src="img/colorpicker.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						RGBA and HSVA modes available.
+					</div>
 				</ul>
 				<li>Pattern Picker</li>
 				<ul>
 					<li><img src="img/patternpicker.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						Symbols used for POI and icon fills.
+					</div>
 				</ul>
 				<li>Opacity Slider</li>
 				<ul>
 					<li><img src="img/opacityslider.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						From 0 (fully transparent) to 1 (fully opaque).
+					</div>
 				</ul>
-				<li>Antialias Toggle <small>(a 1px outline)</small> </li>
+				<li>Antialias Toggle</li>
 				<ul>
 					<li><img src="img/antialias.jpeg" alt="" class="shadow"/></li>
-					<li><em>Notice the handy popup? Every descriptive text does that just in case you're wondering what a property does.</em></li>
+					<div class="caption">
+						Antialias in this context is a 1px outline of a polygon. When you hover
+						over a style tool in the application it shows you a handy descriptive popup.
+					</div>
 				</ul>
 				<li>Antialias Color Picker</li>
 				<ul>
 					<li><img src="img/antialias_color.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						Same color picker as above, except for the antialias color.
+					</div>
 				</ul>
 				<li>Translation Settings</li>
 				<ul>
 					<li><img src="img/translate.jpeg" alt="" class="shadow"/></li>
+					<div class="caption">
+						If you want to have your style visually translated from it's location.
+					</div>
 				</ul>
 			</ul>
 		</p>
@@ -355,6 +400,9 @@
 			<em>background</em> of the map (i.e. the absence of water).
 		</p>
 		<img src="img/background.jpeg" alt="" class="shadow" />
+		<div class="caption">
+			To color the land, you must style the space without water.
+		</div>
 
 		<h4>Countries</h4>
 		<p>
@@ -363,17 +411,27 @@
 			<code>admin</code> layer.
 		</p>
 		<img src="img/add-admin.jpg" alt="" class="shadow" />
+		<div class="caption">
+			You can directly select on the map the data you want to style, or you can
+			select from the list of datasets.
+		</div>
 		<p>
 			When you select the <code>admin</code> layer, you get the entire unfiltered
 			dataset. I want to style only the land country boundaries, so I click the
 			<code>add filter</code> button to see what attributes can be queried out.
 		</p>
 		<img src="img/admin-filter.gif" alt="" class="shadow"/>
+		<div class="caption">
+			Querying the data using the interactive filter tool.
+		</div>
 		<p>
 			For this layer I only want to see level 2 (country), undisputed land boundaries.
 			Let's look at the ways we can style lines.
 		</p>
 		<img src="img/line.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The line styling tools.
+		</div>
 		<p>
 			This is a pretty standard set of line styling options. There are a couple
 			of options worth noting though. The <code>gap width</code> option is
@@ -381,30 +439,44 @@
 			paths for example.
 		</p>
 		<img src="img/line-case-bright.jpeg" alt="" class="shadow" />
+		<div class="caption">
+			The white border on the highway and the slightly darker color of the roads
+			are created using the <code>gap width</code> tools.
+		</div>
 		<p>
-			<em>This is great for road casing. It gives a slight visual separation
-			to the roads. <small> (via Mapbox Streets style)</small></em>
+			This is great for road casing. It gives a slight visual separation
+			to the roads. <small> (via Mapbox Streets style)</small>
 		</p>
 		<p>
-			The <code>blur</code> setting is an interesting one that we'll check out next
+			The <code>blur</code> setting is an interesting one that we'll check out next.
 		</p>
 		<strong>Styling</strong>
 		<p>
 			So let's give our country lines the following settings: <br>
 			<div class="table shadow">
-				<code>
-					color: #EF0 <br>
-					dasharray: [1,2]
-				</code>
+				<table align="center">
+					<tr>
+						<td><code>color:</code></td>
+						<td><code>#EF0</code></td>
+					</tr>
+					<tr>
+						<td><code>dasharray:</code></td>
+						<td><code>[1,2]</code></td>
+					</tr>
+				</table>
 			</div>
 		</p>
 		<img src="img/admin2-1.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			The dashed style isn't very obvious at this scale, but you'll see it more as you zoom in.
+		</div>
 		<p>
 			That's nice, but it stays at <code> width: 1px</code> no matter how much
 			you zoom in. Let's make the line width <strong>vary with zoom level.</strong>
 		</p>
 		<strong>Enter Ramps</strong>
 		<p>
+			Ramps
 			Gone are the days of <code>CartoCSS</code> where you'd have to set explicit
 			style breaks at integer zoom levels. <small><em>("back in my day...")</em></small>.
 			Now a <strong>function</strong> defines the way your style changes as you zoom.

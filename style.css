@@ -322,3 +322,9 @@ a.navbar-brand::hover {
   padding-bottom: 75px;
   text-shadow: 1px 1px 1px black,2px 2px 5px black;
 }
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+}
