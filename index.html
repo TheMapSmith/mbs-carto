@@ -14,8 +14,8 @@
 
 	<link rel="stylesheet" type="text/css" href="sizes.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'> -->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -40,10 +40,10 @@
 			</div>
 	<main role="main">
 		<p class="intro">
-			I've been playing around with the new
+			I've been playing around with the <em>new</em>
 			<a href="http://www.mapbox.com/studio" id="mapbox" target="_blank">Mapbox Studio</a>
 			for a couple of weeks as part of the <a href="https://www.mapbox.com/mapbox-studio/#start-designing" target="_blank">private beta</a>.
-			I've attempted to put the tool through it's paces, to push the
+			I've attempted to put the tool through its paces, to push the
 			cartographic envelope, and now I want to share my thoughts and
 			experiences with you.
 		</p>
@@ -52,18 +52,9 @@
 			developed by
 			the <a href="http://www.osm.org" target="_blank">OpenStreetMap</a> powerhouse.
 		</p>
-		<h3>The Goal:</h3>
-		<h4>
-				Develop a map inspired by neon signs.
-		</h4>
-		<img src="img/mellow-mushroom.jpg" alt="" class="shadow"/>
-		<p>
-			But first...
-		</p>
 
 		<h3>What is <span id="mapbox">Mapbox Studio?</span></h3>
 
-		<div class="">
 			<blockquote>
 				<p><em>
 					<span id="mapbox">Mapbox Studio</span> is a web-based mapping application
@@ -71,9 +62,6 @@
 					<strong>entire</strong> world.
 				</em></p>
 			</blockquote>
-		</div>
-
-
 
 		<h3>Let's unpack that</h3>
 		<p>
@@ -99,17 +87,17 @@
 			power, bandwith, and expertise to <em>consume</em> such a massive data source.
 		</p>
 		<p>
-			Now, in 2015, <span id="mapbox">Mapbox</span> has finally removed the last remaining
+			In 2014 <span id="mapbox">Mapbox</span> finally removed the last remaining
 			technical hurdle. They created a global, lightweight OpenStreetMap data source that
-			is easily digestable using their tools. From their <a href="https://www.mapbox.com/data-platform/" target="_blank">data platform page</a>:
+			is easily digestable using their tools. Their
+			<a href="https://www.mapbox.com/data-platform/" target="_blank">data platform page</a>
+			describes their data sources as:
 		</p>
+
 		<blockquote cite="https://www.mapbox.com/data-platform/">
-			<p>
-				<em>
-					Carefully curated streets, places, terrain, and satellite imagery, updated live.
-				</em>
-			</p>
+			<p><em>Carefully curated streets, places, terrain, and satellite imagery, updated live.</em></p>
 		</blockquote>
+
 		<p>
 			Now, the <em>entire workflow</em> for making your own, customized
 			map of the entire world is:
@@ -120,9 +108,29 @@
 				<li>Map.</li>
 			</ol>
 		</p>
+		<strong>What's new?</strong>
+		<p>
+			They've been teasing the next release of <span id="mapbox">Mapbox Studio</span>
+			with tweets and screenshots for a while now, but on July 29th, 2015 the finally made
+			it official on <a href="https://www.mapbox.com/blog/designing-a-map-with-mapbox-studio/" target="_blank">their blog</a>.
+			The main selling point is that the next version...
+		</p>
+		<blockquote cite="https://www.mapbox.com/blog/designing-a-map-with-mapbox-studio/">
+			<em>will do away with code-based styling and introduce a totally visual interface</em>
+		</blockquote>
+		<p>
+			Gone are the days of typing <code>CartoCSS</code> into a code window to design
+			your maps. It's a GUI world now.
+		</p>
 		<p>
 			With this perspective in mind, let's make a map.
 		</p>
+
+		<h3>The Goal:</h3>
+		<h4>
+				Develop a map inspired by neon signs.
+		</h4>
+		<img src="img/mellow-mushroom.jpg" alt="" class="shadow"/>
 			<!-- TODO: Find a way to <hide> this segment -->
 			<!-- To understand <strong>how</strong> amazing the above
 			statement is, we'll have to go waaaay back.
@@ -234,11 +242,11 @@
 		<h3>The blank source</h3>
 		<p>
 			It can be rather daunting to start from the ground up, but if you're wanting
-			to really make something unique I think it's a must.
+			to really make something unique, I think it's a must.
 		</p>
 		<img src="img/blank.jpeg" alt="" class="shadow"/>
 		<p>
-			This doesn't look to dissimilar to a traditional GIS program. You launch it,
+			This doesn't look too dissimilar to a traditional GIS program. You launch it,
 			and it sits there - empty - waiting for your data.
 		</p>
 
@@ -351,9 +359,10 @@
 		<h4>Countries</h4>
 		<p>
 			Let's add the country boundaries. This will give us a chance to highlight
-			the built-in query tools.
+			the built-in query tools. Go back into New Layer mode and select the
+			<code>admin</code> layer.
 		</p>
-		<img src="img/admin.jpeg" alt="" class="shadow" />
+		<img src="img/add-admin.jpg" alt="" class="shadow" />
 		<p>
 			When you select the <code>admin</code> layer, you get the entire unfiltered
 			dataset. I want to style only the land country boundaries, so I click the
