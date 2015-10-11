@@ -499,13 +499,12 @@
 		<p>
 			My biggest complaint with migrating away from <code>CartoCSS</code> to
 			<a href="https://www.mapbox.com/mapbox-gl-style-spec/" target="_blank"><code>Mapbox GL</code></a>
-			is the fact that the same data layer can't hold multiple styles.
-			Functionally what this means is that if you want any sort of complicated
-			symbology you need to duplicate that layer in your table of contents.
+			is the fact that the same data layer can't hold multiple styles. This means that
+			for each layer style (casing, fill, glow, etc) you'll need <em>another</em> layer.
 		</p>
 		<p>
 			For this map, that means we're ultimately going to end up with
-			<strong>over 100 layers.</strong> <em>(You've been warned)</em>
+			<strong>over 100 layers.</strong>
 		</p>
 		<p>
 			So, let's get started.
@@ -590,7 +589,7 @@
 			</div>
 			<p>
 				Now you're probably starting to piece together why there will  be over
-				100 levels. If we want a glowing effect on all the lines then we're going
+				100 levels. If we want a glowing effect on all the lines, then we're going
 				to have to <em>duplicate each line</em> several times.
 			</p>
 			<p>
