@@ -120,7 +120,11 @@
 		</blockquote>
 		<p>
 			Gone are the days of typing <code>CartoCSS</code> into a code window to design
-			your maps. It's a GUI world now.
+			your maps. In fact, the entire underlying styling language has changed to
+			<code><a href="https://www.mapbox.com/mapbox-gl-style-spec/">Mapbox GL</a></code>, a
+			<code>JSON</code> based language that combines data and style definitions in one neat package.
+			Beyond the language, the code is gone too. Now powerful and easy-to-use styling
+			tools guide your style creation.
 		</p>
 		<p>
 			With this perspective in mind, let's make a map.
@@ -441,7 +445,7 @@
 		<img src="img/line-case-bright.jpeg" alt="" class="shadow" />
 		<div class="caption">
 			The white border on the highway and the slightly darker color of the roads
-			are created using the <code>gap width</code> tools.
+			are created using the <code>gap width</code> settings.
 		</div>
 		<p>
 			This is great for road casing. It gives a slight visual separation
@@ -474,15 +478,19 @@
 			That's nice, but it stays at <code> width: 1px</code> no matter how much
 			you zoom in. Let's make the line width <strong>vary with zoom level.</strong>
 		</p>
-		<strong>Enter Ramps</strong>
+		<strong>Styling by zoom level</strong>
 		<p>
-			Ramps
-			Gone are the days of <code>CartoCSS</code> where you'd have to set explicit
-			style breaks at integer zoom levels. <small><em>("back in my day...")</em></small>.
+			Since <code>Mapbox GL</code> allows floating point zoom levels (versus integer
+			zoom levels in CartoCSS), hard-coding styles to specific zoom levels
+			doesn't make much sense any more.
 			Now a <strong>function</strong> defines the way your style changes as you zoom.
 			This allows you to very quickly setup complex rules for your styles.
 		</p>
 		<img src="img/admin2-ramp.jpeg" alt="" class="shadow"/>
+		<div class="caption">
+			Notice how the line width changes slowly and consistiently from <code>z0</code>
+			to <code>z22</code>.
+		</div>
 		<p>
 			So our yellow dashed country boundaries are nice looking, but let's
 			<strong>kick'em up a notch!</strong>.
@@ -506,7 +514,12 @@
 			Start by duplicating the existing <code>admin</code> layer with the
 			button at the top of the table of contents.
 		</p>
+		<div class="centered">
 			<img src="img/duplicate.jpeg" alt="" class="small shadow"/>
+		</div>
+		<div class="caption">
+			The Duplicate Layer button.
+		</div>
 			<p>
 			We're going to create a neon light-like glowing effect, so below the
 			bright yellow <code>#EF0</code> color we'll put a darker color. We'll
@@ -559,19 +572,22 @@
 				</table>
 			</div>
 			<p>
-				Notice that the ramps aren't a slow steady march from <code>z0</code>
+				Notice that the zoom level scales don't have to be a consistient ramp from <code>z0</code>
 				to <code>z22</code>. In this case I ramp them up quickly so that by time
 				the user gets to <code>z10</code> the admin lines are at their widest.
-				This also means that as they get closer and closer the "visual importance"
-				of the country boundaries fade. This is sensible for the country borders
-				because as the map gets more and more detailed, the border becomes
-				less important visually and the roads start demanding the higher
-				visual importance.
+			</p>
+			<p>
+				I do this to manage the "visual importance" of the country boundaries. As you
+				get closer in and cities and highways start showing up, admin borders become
+				less important compared to roads and rivers.
 			</p>
 			<p>
 				The result will be something like this:
 			</p>
 			<img src="img/admin-ex@3x.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Simulated country border line style with all effects applied.
+			</div>
 			<p>
 				Now you're probably starting to piece together why there will  be over
 				100 levels. If we want a glowing effect on all the lines then we're going
@@ -581,15 +597,24 @@
 				So here's our world map with yellow dashed neon country borders.
 			</p>
 			<img src="img/admin2-done.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing borders at z1.
+			</div>
 			<p>
 				And here it is a little closer:
 			</p>
 			<img src="img/admin2-closeup.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing Switzerland borders.
+			</div>
 			<p>
 				Next I'm going to add admin level 4 (states) in a similar style, but purple
 				and a little thinner than the country borders.
 			</p>
 			<img src="img/admin4.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing admin level-2 boundaries (states).
+			</div>
 			<strong>Water</strong>
 			<p>
 				Those Swiss lakes look a little dull, let's make them glow!
@@ -605,6 +630,9 @@
 				<strong>fill</strong> to <strong><em>line</em></strong>.
 			</p>
 			<img src="img/water-line.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				The selected <code>water</code> layer as a <strong>line</strong> instead of a fill.
+			</div>
 			<p>
 				This new layer will automatically appear at the top of your table of
 				contents, but we don't necessarily want it there. To rearrange, simply
@@ -613,10 +641,16 @@
 			<div class="centered">
 				<img src="img/rearrange.gif" alt="" class="shadow"/>
 			</div>
+			<div class="caption">
+				Rearrange the layers by clicking and dragging.
+			</div>
 			<p>
 				Nice.
 			</p>
 			<img src="img/water-glow.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Glowing water behind the glowing admin boundaries.
+			</div>
 
 			<strong>Basic Labels</strong>
 			<p>
@@ -628,9 +662,12 @@
 				layer.
 			</p>
 			<img src="img/admin-pts-new.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Selecting the <code>country_label</code> data layer and flitering by
+				<code>type = 'country'</code>.
+			</div>
 			<p>
-				Be sure to add a filter for <code>type = country</code> and change the
-				type of layer at the bottom to <code>Symbol</code>
+				Be sure to change the type of layer at the bottom to <code>Symbol</code>.
 			</p>
 			<p>
 				<span id="mapbox">Mapbox</span> has generously teamed up with
@@ -644,12 +681,19 @@
 				Let's style those labels.
 			</p>
 			<img src="img/country-labels.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Labeled countries.
+			</div>
 			<p>
 				Another thing we want to do is have state labels show up at some point
 				as you zoom in. For this we'll use the <code>zoom-extent</code> setting
 				in the new layer window.
 			</p>
 			<img src="img/zoom-extent.jpeg" alt="" class="shadow"/>
+			<div class="caption">
+				Selecting the <code>state_label</code> data layer and set the min
+				<code>zoom extent</code> to 4.
+			</div>
 
 			<strong>Highways</strong>
 
