@@ -74,16 +74,9 @@ blockquote cite:before {
 	padding: 0 1rem;
 }
 
-@font-face {
-  font-family:'Brandon';
-    src:url('brandon_blk.eot');
-    src:url('brandon_blk.eot#iefix') format('embedded-opentype'),
-        url('brandon_blk.woff') format('woff');
-  }
-
 #mapbox {
 	overflow: hidden;
-  font-family:'Brandon', sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
 }
 
